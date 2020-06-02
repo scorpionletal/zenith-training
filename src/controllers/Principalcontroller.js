@@ -1,4 +1,5 @@
 var nodemailer = require('nodemailer');
+
 const principalcontroller = {};
 
 principalcontroller.principal_controller = (req, res) => {
@@ -25,15 +26,19 @@ principalcontroller.mesagetocontact_controller = (req, res)=> {
                 to: 'uni.ramos.telecomun@gmail.com',
                 subject: 'Urgente!!! Cliente',
                 text: 'Hola Mundo',
-                html: '<b>Hola Mundo</b>'
+                html: '<b>Welcome ingeniero</b>'
                 };
                 
                 // Envía el correo con el objeto de transporte definido anteriormente
                 transporter.sendMail(mailOptions, function(error, info){
                 if(error){
-                        return console.log(error);
+                        
+                        res.redirect('/');
+                        console.log(error);
                 }
-                
+                //req.flash('Exito', 'Tu mensaje fue enviado , Gracias por confiar en MaestroPeru')
+                res.redirect('/gracias.html');
+               
                 console.log('Mensaje enviado: ' + info.response);
                 });
                         

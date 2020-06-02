@@ -2,6 +2,9 @@ var express =require('./controllers/app').express;
 var app = require('./controllers/app').app;
 var server = require('./controllers/app').server;
 
+var flash = require('connect-flash');
+
+
 var path = require('path');
 
 //require('dotenv').config();
@@ -16,7 +19,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-
+app.use(flash());
 
 app.set('port', process.env.PORT || 3000);
 //app.set('view engine','ejs');
