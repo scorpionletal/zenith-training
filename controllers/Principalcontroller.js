@@ -23,7 +23,7 @@ principalcontroller.mesagetocontact_controller = (req, res)=> {
                 // configura los datos del correo
                 var mailOptions = {
                 from: "MaestroPeru <leone.vitrub.uni@gmail.com>",
-                to: 'uni.ramos.telecomun@gmail.com',
+                to: 'aleri_55@hotmail.com',
                 subject: 'Urgente!!! Cliente',
                 text: 'Hola Mundo',
                 html: '<b>Welcome ingeniero</b>'
