@@ -90,7 +90,7 @@
 		content="Powered by Slider Revolution 5.4.8.1 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
 	<script type="text/javascript">function setREVStartSize(e) {
 			try {
-			e.c = jQuery(e.c); var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
+				e.c = jQuery(e.c); var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
 				if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) { f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e) }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) { var u = (e.c.width(), jQuery(window).height()); if (void 0 != e.fullScreenOffsetContainer) { var c = e.fullScreenOffsetContainer.split(","); if (c) jQuery.each(c, function (e, i) { u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0)) } f = u } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight); e.c.closest(".rev_slider_wrapper").css({ height: f })
 			} catch (d) { console.log("Failure at Presize of Slider:" + d) }
 		};</script>
@@ -192,12 +192,7 @@
 			font-weight: normal;
 		}
 
-		#nexos h1,
-		#nexos h2,
-		#nexos h3,
-		#nexos p {
-			/*color:#fff;*/
-		}
+
 
 		#specialist-slider .item .specialist_info h3,
 		.specialist_wrap h4 {
@@ -503,9 +498,7 @@
 			background-color: #5aa2dc;
 		}
 
-			{
-			border-bottom: #5aa2dc;
-		}
+
 
 		.popular-food .dish,
 		.faq_wrapper .items>li>a:hover,
@@ -667,12 +660,12 @@
 		</style>
 	</noscript> <!-- Google Tag Manager -->
 	<script>(function (w, d, s, l, i) {
-		w[l] = w[l] || []; w[l].push({
-			'gtm.start':
-				new Date().getTime(), event: 'gtm.js'
-		}); var f = d.getElementsByTagName(s)[0],
-			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-				'../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
 		})(window, document, 'script', 'dataLayer', 'GTM-KWX7CLG');</script> <!-- End Google Tag Manager -->
 </head>
 
@@ -695,24 +688,27 @@
 									class="t2"></span> <span class="t3"></span></div>
 							<nav class="navbar navbar-default" id="primary_nav_wrap">
 								<div class="navbar-header"> <a class="navbar-header logo" href="index.html"> <img
-									src="wp-content/uploads/2018/11/maestro-logo.png" alt="Nexos Perú"
-									class="img-responsive main_logo align-items-stretch" style="margin-top: 5px; margin-left: 25px;"> </a></div>
+											src="wp-content/uploads/2018/11/maestro-logo.png" alt="Nexos Perú"
+											class="img-responsive main_logo align-items-stretch"
+											style="margin-top: 5px; margin-left: 25px;"> </a></div>
 								<div id="fixed-collapse-navbar" class="navbar-collapse collapse navbar-right">
 									<div class="menu-primary-menu-container">
 										<ul id="menu-primary-menu" class="primary-menu nav navbar-nav">
+											<li id="menu-item-2821"
+												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2821">
+												<a class="scroll" title="Productos" href="index.html">Inicio</a>
+											</li>
+
 											<li id="menu-item-2820"
 												class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2820">
 												<a class="scroll" title="Productos" href="productos.html">Productos</a>
 											</li>
-											<li id="menu-item-2821"
-												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2821">
-												<a class="scroll" title="Servicios" href="servicios.html">Servicios</a>
-											</li>
+
 											<li id="menu-item-2822"
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2822">
 												<a class="scroll" title="Proyectos" href="Proyectos.html">Proyectos</a>
 											</li>
-											
+
 											<li id="menu-item-2823"
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2823">
 												<a class="scroll" title="Clientes"
@@ -736,14 +732,18 @@
 			<div id="dl-menu" class="dl-menuwrapper clearfix">
 				<!--<button class="dl-trigger">Open Menu</button> -->
 				<ul id="menu-primary-menu-1" class="dl-menu dl-menuopen">
+					<li id="menu-item-2821"
+						class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2821">
+						<a class="scroll" title="Productos" href="index.html">Inicio</a>
+					</li>
+
 					<li
 						class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2820">
 						<a href="productos.html">Productos</a></li>
-					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2821"><a
-							href="servicios.html">Servicios</a></li>
+
 					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2822"><a
 							href="Proyectos.html">Proyectos</a></li>
-					
+
 					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2823"><a
 							href="clientes/index.html">Clientes</a></li>
 					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2824"><a
@@ -764,13 +764,15 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+							<div
+								class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
 								<div>
-									<img src='data:image/png;base64,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' width="70px" height="80px">
-								</div>						
-													
+									<img src='data:image/png;base64,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'
+										width="70px" height="80px">
+								</div>
+
 							</div>
-							
+
 							<h2 class="title">Solicita una cotización</h2>
 						</div>
 					</div>
@@ -788,7 +790,7 @@
 									<div class="wpb_column vc_column_container vc_col-sm-12">
 										<div class="vc_column-inner">
 											<div class="wpb_wrapper">
-												
+
 												<div class="text-center"> <span class="heading-small-text"> </span>
 													<h2 class="heading-simple"> Gracias</h2>
 												</div>
@@ -818,7 +820,8 @@
 							<div class="widget_text col-md-12 col-sm-12 footer_column">
 								<section id="custom_html-2" class="widget_text widget widget_custom_html">
 									<div class="textwidget custom-html-widget">
-										<h4 style="text-align: center; margin-top: 40px;">MaestroPerú las mejores Casas a tu medida.</h4>
+										<h4 style="text-align: center; margin-top: 40px;">MaestroPerú las mejores Casas
+											a tu medida.</h4>
 									</div>
 								</section>
 							</div>
