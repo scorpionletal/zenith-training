@@ -25,13 +25,13 @@ principalcontroller.mesagetocontact_controller = (req, res)=> {
                 from: "MaestroPeru <leone.vitrub.uni@gmail.com>",
                 to: 'aleri_55@hotmail.com',
                 subject: 'Urgente!!! Cliente',
-                nombre: req.body.name,
-                celular: req.body.phone,
-                correo: req.body.email,
-                Asunto: req.body.subject,
-                producto: req.body.producto,
-                mensaje: req.body.message
-                
+                html: `nombre: ${req.body.name}`+'<br>'+
+                      `celular: ${req.body.phone}`+'<br>'+
+                      `correo: ${req.body.email}`+'<br>'+
+                      `asunto: ${req.body.subject}`+ '<br>'+
+                      `producto: ${req.body.producto}`+'<br>'+
+                      `mensaje: ${req.body.menssage}`  
+               
                 };
                 
                 // Envía el correo con el objeto de transporte definido anteriormente
