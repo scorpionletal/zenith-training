@@ -25,8 +25,8 @@ principalcontroller.mesagetocontact_controller = (req, res)=> {
                 from: "MaestroPeru <leone.vitrub.uni@gmail.com>",
                 to: 'aleri_55@hotmail.com',
                 subject: 'Urgente!!! Cliente',
-                text: 'Hola Mundo',
-                html: '<b>Welcome ingeniero</b>'
+                text: 'Cotizacion',
+                html: req.body
                 };
                 
                 // Envía el correo con el objeto de transporte definido anteriormente
