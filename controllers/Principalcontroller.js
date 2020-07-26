@@ -30,7 +30,7 @@ principalcontroller.mesagetocontact_controller = (req, res)=> {
                       `correo: ${req.body.email}`+'<br>'+
                       `asunto: ${req.body.subject}`+ '<br>'+
                       `producto: ${req.body.producto}`+'<br>'+
-                      `mensaje: ${req.body.menssage}`  
+                      `mensaje: ${req.body.message}`  
                
                 };
                 
