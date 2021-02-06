@@ -22,12 +22,14 @@
     "e2e-test": "samples test deploy"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
-    "express": "4.15.4",
+    "express": "^4.15.4",
     "nodemailer": "^6.4.8"
   },
   "devDependencies": {
-    "@google-cloud/nodejs-repo-tools": "1.4.17"
+    "@google-cloud/nodejs-repo-tools": "1.4.17",
+    "nodemon": "^2.0.7"
   },
   "cloud-repo-tools": {
     "test": {
@@ -39,8 +41,3 @@
     "requiresProjectId": true
   }
 }
-
-
-
-
-
