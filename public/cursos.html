@@ -103,12 +103,177 @@
 			opacity: 0;
 		}
 
+		.player-icon {
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			font-size: 1.125rem;
+			line-height: 40px;
+			text-align: center;
+			color: #fff;
+			transform: translate(-50%, -50%);
+			transition: all .25s ease-out;
+			background-color: rgba(22, 22, 22, .6);
+			border-radius: 50%;
+		}
+		.course-metadata {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    position: absolute;
+    z-index: 3;
+    font-size: .5625rem;
+    text-transform: uppercase;
+}
+.course-metadata span {
+    margin: 0 0 1px;
+    padding: 3px 8px;
+    float: left;
+}
+.course-metadata__category {
+    color: #e8e8e8;
+    background-color: rgba(22,22,22,.6);
+}
+.course-badges {
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+}
+
+@media (min-width: 480px){
+.badge {
+    padding: 0 .3125rem;
+    font-size: .6875rem;
+    line-height: 1.7em;
+}
+}
+.badge {
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    z-index: 2;
+    padding: 0 .25rem;
+    line-height: 1.8em;
+    vertical-align: middle;
+    color: #fff;
+    border-radius: 2px;
+    transform: translateY(-1px);
+}
+.badge--basic, .badge--pro, .badge--scholar, .badge--scholar_2017, .badge-primary {
+    color: #fff;
+    background-color: #f02d00;
+}
+.badge, .forum-avatar {
+    text-transform: uppercase;
+}
+.badge--top_sales {
+    color: #161616;
+    background-color: #ffd100;
+}
+
+.m-course-stats {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.m-course-stats--inline .m-course-stats__stat, .m-course-stats__stat--inline {
+    display: inline-block;
+    margin-right: .5rem;
+}
+.m-course-stats__stat {
+    font-size: .8125rem;
+    color: #848484;
+}
+.courses-list-boxed .course-item__footer .btn-toolbar .price-badges--badges {
+    display: block;
+    font-size: 0;
+}
+.courses-list-boxed .course-item__footer .badge {
+    margin-bottom: .3125rem;
+    margin-right: .25rem;
+}
+.badge--promo-tag-59 {
+    color: #ffffff;
+    background-color: #f02d00;
+}
+.courses-list-boxed .course-item__footer .btn-toolbar .price-badges--prices {
+    top: 18px;
+    left: 0;
+    position: absolute;
+}
+.price-badges .price-discount {
+    color: #f02d00;
+}
+.price-badges .price-before {
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #f02d00;
+}
+
+@media (min-width: 992px){
+.course-item .courses-list-tools {
+    opacity: 0;
+    visibility: hidden;
+}
+}
+.course-item .courses-list-tools {
+    margin-top: 10px;
+    font-size: .8125rem;
+}
+.courses-list-tools {
+    position: relative;
+}
+.btn-quaternary {
+    color: #fff;
+    background-color: #00b2bd;
+    border-color: #00b2bd;
+}
+.course-item__subtitle{margin:10px 0;font-size:1.1rem;font-weight:400;color:#848484}
+.courses-list-boxed .course-item__footer {
+    padding: 0 15px;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+.courses-list-boxed .course-item__footer .btn-toolbar {
+    position: relative;
+    min-height: 68px;
+    padding-top: 40px;
+}
+.btn-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.btn-toolbar .a-button:not(:last-child), .btn-toolbar .as-btn:not(:last-child), .btn-toolbar .btn:not(:last-child), .btn-toolbar .wistia-next-lesson-cta__title:not(:last-child) {
+    margin-right: .3125rem;
+}
+.btn-toolbar>.as-btn {
+    display: inline-block;
+    vertical-align: middle;
+}
+@media (min-width: 768px){
+.flex-md-row {
+    flex-direction: row!important;
+}
+}
+.courses-list-boxed .course-item__footer .btn-toolbar {
+    position: relative;
+    min-height: 68px;
+    padding-top: 40px;
+}
 		.colorfooter {
 			background-color: #182226;
 		}
+
 		.colorbutton {
 			background: #182226 !important;
 		}
+
 		.wpcf7-form input[type=submit] {
 			margin-top: 15px;
 		}
@@ -336,6 +501,7 @@
 
 		@media (min-width: 320px) and (max-width: 480px) {
 
+			
 			.wpb_content_element .wpb_tabs_nav li.ui-tabs-active a,
 			.wpb_gallery .wpb_flexslider .flex-caption {
 				height: 380px;
@@ -362,6 +528,10 @@
 		}
 
 		@media (min-width: 320px) and (max-width: 576px) {
+
+			#slide-1-layer-14 {
+				top: 120px !important;
+			}
 
 			.vc_custom_1544823681595,
 			.vc_custom_1544823805224 {
@@ -854,7 +1024,8 @@
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 5; white-space: nowrap; font-size:  60px; line-height: 100%; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">
 								<span
-									style="font-family:'Montserrat';font-size : 120% !important;font-weight: 700;">Nuestros Cursos </span>
+									style="font-family:'Montserrat';font-size : 120% !important;font-weight: 700;">Nuestros
+									Cursos </span>
 							</div><!-- LAYER NR. 2 -->
 							<div class="tp-caption   tp-resizeme" id="slide-1-layer-11"
 								data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
@@ -867,7 +1038,8 @@
 								data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 6; white-space: nowrap; font-size: 60px ;  color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">
-								<span style="font-family:'Montserrat';font-size : 58% !important;">Zenit Trining Center</span>
+								<span style="font-family:'Montserrat';font-size : 58% !important;">Zenit Trining
+									Center</span>
 							</div><!-- LAYER NR. 3 -->
 							<div class="tp-caption   tp-resizeme" id="slide-1-layer-12"
 								data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
@@ -884,13 +1056,13 @@
 									aprende con los mejores </span>
 							</div><!-- LAYER NR. 4 -->
 
-							
+
 
 
 							<!-- video -->
 
 						</li> <!-- SLIDE  -->
-						
+
 					</ul>
 
 					<script type="text/javascript">if (setREVStartSize !== undefined) setREVStartSize(
@@ -995,7 +1167,7 @@
 						}</script>
 				</div><!-- END REVOLUTION SLIDER -->
 			</div>
-			
+
 
 			<div class="container">
 
@@ -1017,310 +1189,894 @@
 										</div>
 									</div>
 
-									<div class="vc_row-full-width vc_clearfix"></div>
-									<div id="Proyectos" data-vc-full-width="true" data-vc-full-width-init="false"
-										data-vc-parallax="1.5"
-										class="vc_row wpb_row vc_row-fluid vc_custom_1568766635753 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving">
-										<div class="wpb_column vc_column_container vc_col-sm-12">
-											<div class="vc_column-inner">
-												<div class="wpb_wrapper">
-													<div class="text-center"> <span class="heading-small-text"> </span>
-														<h1 class="heading-simple">Cursos</h1>
-													</div>
-													<div class="vc_empty_space" style="height: 32px"><span
-															class="vc_empty_space_inner"></span></div>
-													<div class="wpb_text_column wpb_content_element ">
-														<div class="wpb_wrapper">
-															<div
-																class="carousel-slider-outer carousel-slider-outer-posts carousel-slider-outer-2710">
-																<style type="text/css">
-																	#id-2710 .carousel-slider-nav-icon {
-																		fill: #182226
-																	}
-
-																	#id-2710 .carousel-slider-nav-icon:hover {
-																		fill: #131313
-																	}
-
-																	#id-2710 .owl-prev,
-																	#id-2710 .owl-next,
-																	#id-2710 .carousel-slider-nav-icon {
-																		height: 48px;
-																		width: 48px
-																	}
-
-																	#id-2710.arrows-outside .owl-prev {
-																		left: -48px
-																	}
-
-																	#id-2710.arrows-outside .owl-next {
-																		right: -48px
-																	}
-
-																	#id-2710 .owl-dots .owl-dot span {
-																		background-color: #5aa2dc;
-																		width: 10px;
-																		height: 10px;
-																	}
-
-																	#id-2710 .owl-dots .owl-dot.active span,
-																	#id-2710 .owl-dots .owl-dot:hover span {
-																		background-color: #131313
-																	}
-																</style>
-																<div id="id-2710"
-																	class="owl-carousel carousel-slider arrows-outside arrows-visible-always dots-hidden dots-center dots-square"
-																	data-slide-type="post-carousel" data-margin="10"
-																	data-slide-by="1" data-loop="true"
-																	data-lazy-load="false" data-stage-padding="0"
-																	data-auto-width="false" data-dots="false"
-																	data-nav="true" data-autoplay="true"
-																	data-autoplay-timeout="5000"
-																	data-autoplay-speed="500"
-																	data-autoplay-hover-pause="true" data-colums="3"
-																	data-colums-desktop="3"
-																	data-colums-small-desktop="3" data-colums-tablet="2"
-																	data-colums-small-tablet="1" data-colums-mobile="1">
-																	<div class="carousel-slider__post">
-																		<div class="carousel-slider__post-content">
-																			<div class="carousel-slider__post-header"><a
-																					href="cursos/autocad.html"
-																					class="carousel-slider__post-image"
-																					style="background-image: url(https://dondeestudiar.eu/wp-content/uploads/2020/09/curso-completo-autocad.jpg)"></a><a
-																					class="carousel-slider__post-title"
-																					href="cursos/autocad.html">
-																					<h2>Zenith : CURSO DE AUTOCAD </h2>
-																				</a></div>
-																			<div class="carousel-slider__post-excerpt">
-																				Descubrirás qué es Autocad y para qué sirve, desde la familiarización a su entorno de trabajo hasta las principales herramientas de diseño y edición.
-Tras aprender cómo usar Autocad a un nivel introductorio, sabrás cómo hacer un plano arquitectónico usando capas, figuras geométricas y otros elementos del programa.
-Entenderás qué son las cotas en Autocad y cómo añadirlas a tus planos, entre otros aspectos que aportarán valor e información a tu diseño.
-Conocerás elementos como texto multilínea, numeración continua y comandos de Autocad. Estos te permitirán desenvolverte con mayor facilidad en el programa.</div>
-																			<footer class="carousel-slider__post-meta">
-
-																				<div
-																					class="carousel-slider__post-category">
-																					<a class="carousel-slider__post-category-link"
-																						href=""></a>
-																				</div>
-																			</footer>
-																		</div>
-																	</div>
-																	<div class="carousel-slider__post">
-																		<div class="carousel-slider__post-content">
-																			<div class="carousel-slider__post-header"><a
-																					href="cursos/civil3d.html"
-																					class="carousel-slider__post-image"
-																					style="background-image: url(https://i.ytimg.com/vi/rZl43Zdlmgs/maxresdefault.jpg)"></a><a
-																					class="carousel-slider__post-title"
-																					href="cursos/civil3d.html">
-																					<h2>Zenith : CURSO DE CIVIL 3D</h2>
-																				</a></div>
-																			<div class="carousel-slider__post-excerpt">
-																				Participar en el diseño de carreteras y proyectos civiles y topográficos.
-Al realizar un levantamiento topográfico en campo, podrán importar esos puntos de terreno al Civil3D y ahorrar mucho tiempo en dibujo.
-Crear superficies de terreno en 2 y 3 dimensiones y generar cálculos como área, volumen y movimiento de tierra
-Construir Alineamientos horizontales y verticales que permitan diseñar una obra lineal como carreteras, canales, puentes, ferrocarriles, lineas de alta tensión entre otros.
-Elaborar planos profesionales de presentación de obras tanto en planta como en perfil.
-																			</div>
-																			<footer class="carousel-slider__post-meta">
-
-																				<div
-																					class="carousel-slider__post-category">
-																					<a class="carousel-slider__post-category-link"
-																						href="#"></a>
-																				</div>
-																			</footer>
-																		</div>
-																	</div>
-																	<div class="carousel-slider__post">
-																		<div class="carousel-slider__post-content">
-																			<div class="carousel-slider__post-header"><a
-																					href="cursos/revit.html"
-																					class="carousel-slider__post-image"
-																					style="background-image: url(https://img.milanuncios.com/fg/2824/42/282442362_1.jpg?VersionId=iHP.8rRSW9Rn8zlTojumW4jY_5rOVAA2)"></a><a
-																					class="carousel-slider__post-title"
-																					href="cursos/revit.html">
-																					<h2>Zenith : CURSO DE REVIT
-																						</h2>
-																				</a></div>
-																			<div class="carousel-slider__post-excerpt">
-																				Conoce La interfaz del programa de Revit Arquitectura
-Aprende a Configurar Un LinkCAD
-Comandos de Modificacion
-Aprende los Procesos constructivos Arquitectonicos y de Ingenieria
-Aprende a Crear Familias, Instalar Familias, Cargar Familias, y a Ingresar Componentes
-Aprende a Generar Render, Perspectivas, Vistas Isometricas, Asoleamientos.
-Aprende a Crear Un Entorno Topografico
-Aprende a Crear tus Entregables para Impresion
-Aprende a Ingresar Etiquetas y Etiquetas de Habitacion
-																			</div>
-																			<footer class="carousel-slider__post-meta">
-
-																				<div
-																					class="carousel-slider__post-category">
-																					<a class="carousel-slider__post-category-link"
-																						href=""></a>
-																				</div>
-																			</footer>
-																		</div>
-																	</div>
-																	<div class="carousel-slider__post">
-																		<div class="carousel-slider__post-content">
-																			<div class="carousel-slider__post-header"><a
-																					href="cursos/autodesk.html"
-																					class="carousel-slider__post-image"
-																					style="background-image: url(https://editeca.com/wp-content/uploads/2020/09/Portada-Como-certificarse-Online-con-Autodesk-1.jpg)"></a><a
-																					class="carousel-slider__post-title"
-																					href="cursos/autodesk.html">
-																					<h2>Zenith : 
-																						CURSO DE AUTODESK
-																					</h2>
-																				</a></div>
-																			<div class="carousel-slider__post-excerpt">
-																				Aprenderás todo lo que necesitas para comenzar con un proyecto de Infraestructura BIM en Autodesk Civil 3D tanto en la fase de diseño como en la fase de construcción.
-																				Aprenderás a generar un proyecto BIM de Infraestructuras con el software Autodesk Civil 3D. El curso está dividido en 3 capítulos:
-
-En el primer capitulo aprenderás a configurar plantillas de trabajo
-
-En el segundo capitulo aprenderás a crear los objetos principales (Superficies, alineaciones, perfiles longitudinales, obras lineales)
-
-En el tercer capitulo aprenderás a generar planos y a extraer mediciones del proyecto.
-																			</div>
-																			<footer class="carousel-slider__post-meta">
-
-																				<div
-																					class="carousel-slider__post-category">
-																					<a class="carousel-slider__post-category-link"
-																						href="#"></a>
-																				</div>
-																			</footer>
-																		</div>
-																	</div>
-																	
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="vc_empty_space" style="height: 32px"><span
-															class="vc_empty_space_inner"></span></div>
-													<div class="wpb_text_column wpb_content_element ">
-														<div class="wpb_wrapper">
-															<p style="text-align: center;"><a class="btn button "
-																	href="cursos.html" >Todos Nuestros Cursos</a>
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="vc_row-full-width vc_clearfix"></div>
-									<div id="matias" data-vc-full-width="true" data-vc-full-width-init="false"
-										class="vc_row wpb_row vc_row-fluid vc_custom_1568759403522 vc_row-has-fill">
-										<div class="wpb_column vc_column_container vc_col-sm-6">
-											<div class="vc_column-inner">
-												<div class="wpb_wrapper">
-													<div
-														class="wpb_text_column wpb_content_element  vc_custom_1544206886754">
-														<div class="wpb_wrapper">
-															<h1 style="text-align: left;">Nuestros mejores especialistas a tu 
-															servicio.</h1>
-															<h3 style="text-align: left;">Solicita informacion</h3>
-															<p><span style="font-weight: 400;">No dejes pasar esta gran oportunidad
-															de capacitarte con los mejores, todos nuestros especialistas cuentan con
-															certificado del curso a dictar, tu educacion no puede esperar.</span></p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="wpb_column vc_column_container vc_col-sm-6">
-											<div class="vc_column-inner">
-												<div class="wpb_wrapper">
-													<div class="wpb_single_image wpb_content_element vc_align_left">
-														<figure class="wpb_wrapper vc_figure">
-															<div class="vc_single_image-wrapper   vc_box_border_grey">
-																<img width="1024" height="780"
-																	src="wp-content/uploads/2019/09/promocionzenith.png"
-																	class="vc_single_image-img attachment-full" alt=""
-																	srcset="wp-content/uploads/2019/09/promocionzenith.png 1024w, wp-content/uploads/2019/09/promocionzenith.png 300w, wp-content/uploads/2019/09/promocionzenith.png 768w, wp-content/uploads/2019/09/promocionzenith.png 63w, wp-content/uploads/2019/09/promocionzenith.png 64w"
-																	sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
-															</div>
-														</figure>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="vc_row-full-width vc_clearfix"></div>
 									<section class="latest_news_area p_100">
 										<div class="container">
 											<div class="b_center_title">
 												<h2>Cursos brindados</h2>
 												<p>Una amplia variedad de cursos que ponemos a su disposición</p>
 											</div>
-											<div class="l_news_inner">
-												<div class="row">
-													<div class="col-lg-4 col-md-6">
-														<div class="l_news_item">
-															<div class="l_news_img"><a href="#"><img class="img-fluid" src="https://dondeestudiar.eu/wp-content/uploads/2020/09/curso-completo-autocad.jpg" alt=""></a></div>
-															<div class="l_news_content">
-																<a href="#"><h4>Autocad</h4></a>
-																<p>Cubrimos todo tipo de requerimiento y nos ajustamos a cualquier presupuesto, para una correcta infraestructura tecnológica y sea aprovechada al máximo.</p>
-																<a class="more_btn" href="#">Learn More</a>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-4 col-md-6">
-														<div class="l_news_item">
-															<div class="l_news_img"><a href="#"><img class="img-fluid" src="https://i.ytimg.com/vi/rZl43Zdlmgs/maxresdefault.jpg" alt=""></a></div>
-															<div class="l_news_content">
-																<a href="#"><h4>Civil 3D</h4></a>
-																<p>Diseño, ejecucion de proyectos de cableado estructurado en empresas, edificios, data center con Cable ethernet o fibra optica.</p>
-																<a class="more_btn" href="#">Learn More</a>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-4 col-md-6">
-														<div class="l_news_item">
-															<div class="l_news_img"><a href="#"><img class="img-fluid" src="https://img.milanuncios.com/fg/2824/42/282442362_1.jpg?VersionId=iHP.8rRSW9Rn8zlTojumW4jY_5rOVAA2" alt=""></a></div>
-															<div class="l_news_content">
-																<a href="#"><h4>Revit</h4></a>
-																<p>Aplicaciones Web como paginas empresariales, sistemas web como intranets para pequeñas y medianas empresas.</p>
-																<a class="more_btn" href="#">Learn More</a>
-															</div>
-														</div>
-													</div>
+											<div class="row">
+												<div class="col-md-3">
+
 												</div>
-												<div class="row">
-													<div class="col-lg-4 col-md-6">
-														<div class="l_news_item">
-															<div class="l_news_img"><a href="#"><img class="img-fluid" src="img/t5.jpg" alt=""></a></div>
-															<div class="l_news_content">
-																<a href="#"><h4>Redes Inalambricas</h4></a>
-																<p>Diseño e implementacion de redes punto punto y punto multipunto tomando en cosideracion parametros atmosfericos en todo el Peru.</p>
-																<a class="more_btn" href="#">Learn More</a>
+												<div class="col-md-9">
+													<div class="row">
+														<div class="col-lg-4 col-md-6">
+															<div class="course-item" style="padding-bottom: 3.625rem;">
+																<div class="course-item__box">
+																	<a class="course-item__cover video-player" style="font-weight: 500;position: relative;display: block;"
+																		title="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																		data-track-label="Diseño, Fotografía y Vídeo"
+																		data-track-href="#"
+																		data-track-gtm="false" data-track-gtm-id="387"
+																		data-track-gtm-title="Introducción a Adobe Photoshop"
+																		data-track-gtm-brand="carlesmarsal"
+																		data-track-gtm-price="11.9"
+																		data-track-gtm-category="Fotografía y Vídeo"
+																		data-track-gtm-section="Listing Popular"
+																		data-track-action="play" data-toggle="modal"
+																		data-target="#course-modal" data-dismiss="modal"
+																		href="https://www.domestika.org/es/xhr/courses/modals/387-introduccion-a-adobe-photoshop">
+																		<picture>
+																			<source
+																				media="only screen and (max-width: 479px)"
+																				data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																				srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																			<source
+																				media="only screen and (min-width: 992px)"
+																				data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																				srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																			<source
+																				media="only screen and (min-width: 480px)"
+																				data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																				srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																			<img data-src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713"
+																				alt="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																				class=" lazyloaded"
+																				src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713">
+																		</picture>
+																		<span class="player-icon"
+																		><i
+																				class="fa fa-play"></i></span>
+																		<span class="course-metadata clearfix">
+																			<span
+																				class="course-metadata__category">Fotografía
+																				y Vídeo</span>
+																		</span>
+																		<div class="course-badges">
+																			<span class="badge badge--basic ">Zenith
+																				Basics</span>
+																			<span
+																				class="badge badge--basic_courses badge--course">5
+																				cursos</span>
+
+																		</div>
+
+																	</a>
+																	<div class="course-item__details">
+																		<h3 class="course-item__title" style="font-family: inherit;">
+																			<span class="badge badge--top_sales ">Top
+																				ventas</span>
+																			<a data-track-label="Diseño, Fotografía y Vídeo"
+																				data-track-href="#"
+																				data-track-gtm="false"
+																				data-track-gtm-id="387"
+																				data-track-gtm-title="Introducción a Adobe Photoshop"
+																				data-track-gtm-brand="carlesmarsal"
+																				data-track-gtm-price="11.9"
+																				data-track-gtm-category="Fotografía y Vídeo"
+																				data-track-gtm-section="Listing Popular"
+																				data-track-action="course-title"
+																				href="#">Introducción
+																				a Adobe Photoshop</a>
+																		</h3>
+																		<p class="course-item__teacher">
+																			Por Carles Marsal
+																		</p>
+																		<h4 class="course-item__subtitle">
+																			Aprende Adobe Photoshop desde cero y domina
+																			el mejor software de tratamiento, retoque y
+																			creación de imágenes digitales del mercado
+																		</h4>
+																		<div class="course-item__stats">
+																			<ul class="m-course-stats">
+																				<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																					data-placement="top"
+																					data-toggle="tooltip"
+																					title="Alumnos">
+																					<i class="a-icon-user"></i>
+																					229335
+																				</li>
+																				<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																					data-placement="top"
+																					data-toggle="tooltip"
+																					title="El 100% de las 6070 valoraciones de los alumnos son positivas">
+																					<i class="a-icon-thumbs-up"></i>
+																					100%
+																					(<span
+																						data-href="#/reviews">6.1K</span>)
+																				</li>
+																			</ul>
+
+																		</div>
+																	</div>
+
+																	<footer class="course-item__footer">
+																		<div
+																			class="btn-toolbar flex-column flex-md-row">
+																			<form
+																				class="as-btn js-add-to-cart-form js-form-disable-button "
+																				action="#/add_to_cart"
+																				accept-charset="UTF-8" method="post">
+																				<input type="hidden"
+																					name="authenticity_token"
+																					value="BUvUNdoHDKYLeckxe38OZvztD51cL1zAJ9EXY64f97OkVBqVpA6RyNguXJRig1jT9UV5+bsDV3HJT/GJvWyD3g==">
+																				<button name="button" type="submit"
+																					id="t-add-to-cart-387"
+																					class="btn btn-quaternary btn-sm btn-sm--bigger-font"
+																					data-track-action="purchase"
+																					data-track-label="Diseño, Fotografía y Vídeo"
+																					data-track-href="#"
+																					data-disable="true"><i
+																						class="fa fa-shopping-cart"></i>
+																					<span class="price to-right"><span
+																							class="m-price">S/
+																							29.90</span></span>
+
+																				</button>
+																			</form>
+
+
+																			<span
+																				class="price-badges js-price-badges t-price-badges">
+																				<span
+																					class="price-badges--badges t-price-badges--badges">
+																					<a
+																						href="#"><span
+																							class="badge badge--promo-tag-59 ">REBAJAS</span></a>
+																				</span>
+																				<span class="price-badges--prices">
+																					<span
+																						class="price-discount t-price-discount">80%
+																						Dto.</span>
+																					<b
+																						class="price-before t-price-before"><span
+																							class="m-price">S/
+																							149</span></b>
+																				</span>
+																			</span>
+
+
+																		</div>
+																	</footer>
+																</div>
+															</div>
+														</div>
+														<div class="col-lg-4 col-md-6">
+															<div class="course-item__box">
+																<a class="course-item__cover video-player" style="font-weight: 500;position: relative;display: block;"
+																	title="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																	data-track-label="Diseño, Fotografía y Vídeo"
+																	data-track-href="https://www.domestika.org/es/xhr/courses/modals/499-introduccion-a-adobe-illustrator"
+																	data-track-gtm="false" data-track-gtm-id="387"
+																	data-track-gtm-title="Introducción a Adobe Photoshop"
+																	data-track-gtm-brand="carlesmarsal"
+																	data-track-gtm-price="11.9"
+																	data-track-gtm-category="Fotografía y Vídeo"
+																	data-track-gtm-section="Listing Popular"
+																	data-track-action="play" data-toggle="modal"
+																	data-target="#course-modal" data-dismiss="modal"
+																	href="https://www.domestika.org/es/xhr/courses/modals/499-introduccion-a-adobe-illustrator">
+																	<picture>
+																		<source
+																			media="only screen and (max-width: 479px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726, https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726 2x">
+																		<source
+																			media="only screen and (min-width: 992px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726, https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726, https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726 2x">
+																		<source
+																			media="only screen and (min-width: 480px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726, https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726 2x">
+																		<img data-src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726"
+																			alt="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																			class=" lazyloaded"
+																			src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1592409726/course-covers/000/000/499/499-original.jpg?1592409726">
+																	</picture>
+																	<span class="player-icon"
+																		style="top:50%; left: 50%; position:relat; font-size: 1.125rem; line-height: 40px; text-align: center;color: #fff;transform: translate(-50%,-50%);background-color: rgba(22,22,22,.6);"><i
+																			class="fa fa-play"></i></span>
+																	<span class="course-metadata clearfix">
+																		<span
+																			class="course-metadata__category">Fotografía
+																			y Vídeo</span>
+																	</span>
+																	<div class="course-badges">
+																		<span class="badge badge--basic ">Zenith
+																			Basics</span>
+																		<span
+																			class="badge badge--basic_courses badge--course">5
+																			cursos</span>
+
+																	</div>
+
+																</a>
+																<div class="course-item__details">
+																	<h3 class="course-item__title">
+																		<span class="badge badge--top_sales ">Top
+																			ventas</span>
+																		<a data-track-label="Diseño, Fotografía y Vídeo"
+																			data-track-href="#"
+																			data-track-gtm="false"
+																			data-track-gtm-id="387"
+																			data-track-gtm-title="Introducción a Adobe Photoshop"
+																			data-track-gtm-brand="carlesmarsal"
+																			data-track-gtm-price="11.9"
+																			data-track-gtm-category="Fotografía y Vídeo"
+																			data-track-gtm-section="Listing Popular"
+																			data-track-action="course-title"
+																			href="#">Introducción
+																			a Adobe Photoshop</a>
+																	</h3>
+																	<p class="course-item__teacher">
+																		Por Carles Marsal
+																	</p>
+																	<h4 class="course-item__subtitle">
+																		Aprende Adobe Photoshop desde cero y domina el
+																		mejor software de tratamiento, retoque y
+																		creación de imágenes digitales del mercado
+																	</h4>
+																	<div class="course-item__stats">
+																		<ul class="m-course-stats">
+																			<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																				data-placement="top"
+																				data-toggle="tooltip" title="Alumnos">
+																				<i class="a-icon-user"></i>
+																				229335
+																			</li>
+																			<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																				data-placement="top"
+																				data-toggle="tooltip"
+																				title="El 100% de las 6070 valoraciones de los alumnos son positivas">
+																				<i class="a-icon-thumbs-up"></i>
+																				100%
+																				(<span
+																					data-href="#/reviews">6.1K</span>)
+																			</li>
+																		</ul>
+
+																	</div>
+																</div>
+
+																<footer class="course-item__footer">
+																	<div class="btn-toolbar flex-column flex-md-row">
+																		<form
+																			class="as-btn js-add-to-cart-form js-form-disable-button "
+																			action="#/add_to_cart"
+																			accept-charset="UTF-8" method="post"><input
+																				type="hidden" name="authenticity_token"
+																				value="BUvUNdoHDKYLeckxe38OZvztD51cL1zAJ9EXY64f97OkVBqVpA6RyNguXJRig1jT9UV5+bsDV3HJT/GJvWyD3g==">
+																			<button name="button" type="submit"
+																				id="t-add-to-cart-387"
+																				class="btn btn-quaternary btn-sm btn-sm--bigger-font"
+																				data-track-action="purchase"
+																				data-track-label="Diseño, Fotografía y Vídeo"
+																				data-track-href="#"
+																				data-disable="true"><i
+																					class="fa fa-shopping-cart"></i>
+																				<span class="price to-right"><span
+																						class="m-price">S/
+																						29.90</span></span>
+
+																			</button>
+																		</form>
+
+
+																		<span
+																			class="price-badges js-price-badges t-price-badges">
+																			<span
+																				class="price-badges--badges t-price-badges--badges">
+																				<a
+																					href="#"><span
+																						class="badge badge--promo-tag-59 ">REBAJAS</span></a>
+																			</span>
+																			<span class="price-badges--prices">
+																				<span
+																					class="price-discount t-price-discount">80%
+																					Dto.</span>
+																				<b class="price-before t-price-before"><span
+																						class="m-price">S/
+																						149</span></b>
+																			</span>
+																		</span>
+
+
+																	</div>
+																</footer>
+															</div>
+														</div>
+														<div class="col-lg-4 col-md-6">
+															<div class="course-item__box">
+																<a class="course-item__cover video-player" style="font-weight: 500;position: relative;display: block;"
+																	title="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																	data-track-label="Diseño, Fotografía y Vídeo"
+																	data-track-href="#"
+																	data-track-gtm="false" data-track-gtm-id="387"
+																	data-track-gtm-title="Introducción a Adobe Photoshop"
+																	data-track-gtm-brand="carlesmarsal"
+																	data-track-gtm-price="11.9"
+																	data-track-gtm-category="Fotografía y Vídeo"
+																	data-track-gtm-section="Listing Popular"
+																	data-track-action="play" data-toggle="modal"
+																	data-target="#course-modal" data-dismiss="modal"
+																	href="https://www.domestika.org/es/xhr/courses/modals/387-introduccion-a-adobe-photoshop">
+																	<picture>
+																		<source
+																			media="only screen and (max-width: 479px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<source
+																			media="only screen and (min-width: 992px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<source
+																			media="only screen and (min-width: 480px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<img data-src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713"
+																			alt="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																			class=" lazyloaded"
+																			src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713">
+																	</picture>
+																	<span class="player-icon"
+																		style="top:50%; left: 50%; position:relat; font-size: 1.125rem; line-height: 40px; text-align: center;color: #fff;transform: translate(-50%,-50%);background-color: rgba(22,22,22,.6);"><i
+																			class="fa fa-play"></i></span>
+																	<span class="course-metadata clearfix">
+																		<span
+																			class="course-metadata__category">Fotografía
+																			y Vídeo</span>
+																	</span>
+																	<div class="course-badges">
+																		<span class="badge badge--basic ">Zenith
+																			Basics</span>
+																		<span
+																			class="badge badge--basic_courses badge--course">5
+																			cursos</span>
+
+																	</div>
+
+																</a>
+																<div class="course-item__details">
+																	<h3 class="course-item__title">
+																		<span class="badge badge--top_sales ">Top
+																			ventas</span>
+																		<a data-track-label="Diseño, Fotografía y Vídeo"
+																			data-track-href="#"
+																			data-track-gtm="false"
+																			data-track-gtm-id="387"
+																			data-track-gtm-title="Introducción a Adobe Photoshop"
+																			data-track-gtm-brand="carlesmarsal"
+																			data-track-gtm-price="11.9"
+																			data-track-gtm-category="Fotografía y Vídeo"
+																			data-track-gtm-section="Listing Popular"
+																			data-track-action="course-title"
+																			href="#">Introducción
+																			a Adobe Photoshop</a>
+																	</h3>
+																	<p class="course-item__teacher">
+																		Por Carles Marsal
+																	</p>
+																	<h4 class="course-item__subtitle">
+																		Aprende Adobe Photoshop desde cero y domina el
+																		mejor software de tratamiento, retoque y
+																		creación de imágenes digitales del mercado
+																	</h4>
+																	<div class="course-item__stats">
+																		<ul class="m-course-stats">
+																			<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																				data-placement="top"
+																				data-toggle="tooltip" title="Alumnos">
+																				<i class="a-icon-user"></i>
+																				229335
+																			</li>
+																			<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																				data-placement="top"
+																				data-toggle="tooltip"
+																				title="El 100% de las 6070 valoraciones de los alumnos son positivas">
+																				<i class="a-icon-thumbs-up"></i>
+																				100%
+																				(<span
+																					data-href="#/reviews">6.1K</span>)
+																			</li>
+																		</ul>
+
+																	</div>
+																</div>
+
+																<footer class="course-item__footer">
+																	<div class="btn-toolbar flex-column flex-md-row">
+																		<form
+																			class="as-btn js-add-to-cart-form js-form-disable-button "
+																			action="#/add_to_cart"
+																			accept-charset="UTF-8" method="post"><input
+																				type="hidden" name="authenticity_token"
+																				value="BUvUNdoHDKYLeckxe38OZvztD51cL1zAJ9EXY64f97OkVBqVpA6RyNguXJRig1jT9UV5+bsDV3HJT/GJvWyD3g==">
+																			<button name="button" type="submit"
+																				id="t-add-to-cart-387"
+																				class="btn btn-quaternary btn-sm btn-sm--bigger-font"
+																				data-track-action="purchase"
+																				data-track-label="Diseño, Fotografía y Vídeo"
+																				data-track-href="#"
+																				data-disable="true"><i
+																					class="fa fa-shopping-cart"></i>
+																				<span class="price to-right"><span
+																						class="m-price">S/
+																						29.90</span></span>
+
+																			</button>
+																		</form>
+
+
+																		<span
+																			class="price-badges js-price-badges t-price-badges">
+																			<span
+																				class="price-badges--badges t-price-badges--badges">
+																				<a
+																					href="#"><span
+																						class="badge badge--promo-tag-59 ">REBAJAS</span></a>
+																			</span>
+																			<span class="price-badges--prices">
+																				<span
+																					class="price-discount t-price-discount">80%
+																					Dto.</span>
+																				<b class="price-before t-price-before"><span
+																						class="m-price">S/
+																						149</span></b>
+																			</span>
+																		</span>
+
+
+																	</div>
+																</footer>
 															</div>
 														</div>
 													</div>
-													<div class="col-lg-4 col-md-6">
-														<div class="l_news_item">
-															<div class="l_news_img"><a href="#"><img class="img-fluid" src="https://editeca.com/wp-content/uploads/2020/09/Portada-Como-certificarse-Online-con-Autodesk-1.jpg" alt=""></a></div>
-															<div class="l_news_content">
-																<a href="#"><h4>Autodesk</h4></a>
-																<p>FTTH y tecnologia GPON para implementacion de planta externa con tendido de posteria y ducteria.</p>
-																<a class="more_btn" href="#">Learn More</a>
+													<div class="row">
+														<div class="col-lg-4 col-md-6">
+															<div class="course-item__box">
+																<a class="course-item__cover video-player" style="font-weight: 500;position: relative;display: block;"
+																	title="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																	data-track-label="Diseño, Fotografía y Vídeo"
+																	data-track-href="#"
+																	data-track-gtm="false" data-track-gtm-id="387"
+																	data-track-gtm-title="Introducción a Adobe Photoshop"
+																	data-track-gtm-brand="carlesmarsal"
+																	data-track-gtm-price="11.9"
+																	data-track-gtm-category="Fotografía y Vídeo"
+																	data-track-gtm-section="Listing Popular"
+																	data-track-action="play" data-toggle="modal"
+																	data-target="#course-modal" data-dismiss="modal"
+																	href="https://www.domestika.org/es/xhr/courses/modals/387-introduccion-a-adobe-photoshop">
+																	<picture>
+																		<source
+																			media="only screen and (max-width: 479px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<source
+																			media="only screen and (min-width: 992px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<source
+																			media="only screen and (min-width: 480px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<img data-src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713"
+																			alt="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																			class=" lazyloaded"
+																			src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713">
+																	</picture>
+																	<span class="player-icon"
+																		style="top:50%; left: 50%; position:relat; font-size: 1.125rem; line-height: 40px; text-align: center;color: #fff;transform: translate(-50%,-50%);background-color: rgba(22,22,22,.6);"><i
+																			class="fa fa-play"></i></span>
+																	<span class="course-metadata clearfix">
+																		<span
+																			class="course-metadata__category">Fotografía
+																			y Vídeo</span>
+																	</span>
+																	<div class="course-badges">
+																		<span class="badge badge--basic ">Zenith
+																			Basics</span>
+																		<span
+																			class="badge badge--basic_courses badge--course">5
+																			cursos</span>
+
+																	</div>
+
+																</a>
+																<div class="course-item__details">
+																	<h3 class="course-item__title">
+																		<span class="badge badge--top_sales ">Top
+																			ventas</span>
+																		<a data-track-label="Diseño, Fotografía y Vídeo"
+																			data-track-href="#"
+																			data-track-gtm="false"
+																			data-track-gtm-id="387"
+																			data-track-gtm-title="Introducción a Adobe Photoshop"
+																			data-track-gtm-brand="carlesmarsal"
+																			data-track-gtm-price="11.9"
+																			data-track-gtm-category="Fotografía y Vídeo"
+																			data-track-gtm-section="Listing Popular"
+																			data-track-action="course-title"
+																			href="#">Introducción
+																			a Adobe Photoshop</a>
+																	</h3>
+																	<p class="course-item__teacher">
+																		Por Carles Marsal
+																	</p>
+																	<h4 class="course-item__subtitle">
+																		Aprende Adobe Photoshop desde cero y domina el
+																		mejor software de tratamiento, retoque y
+																		creación de imágenes digitales del mercado
+																	</h4>
+																	<div class="course-item__stats">
+																		<ul class="m-course-stats">
+																			<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																				data-placement="top"
+																				data-toggle="tooltip" title="Alumnos">
+																				<i class="a-icon-user"></i>
+																				229335
+																			</li>
+																			<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																				data-placement="top"
+																				data-toggle="tooltip"
+																				title="El 100% de las 6070 valoraciones de los alumnos son positivas">
+																				<i class="a-icon-thumbs-up"></i>
+																				100%
+																				(<span
+																					data-href="#/reviews">6.1K</span>)
+																			</li>
+																		</ul>
+
+																	</div>
+																</div>
+
+																<footer class="course-item__footer">
+																	<div class="btn-toolbar flex-column flex-md-row">
+																		<form
+																			class="as-btn js-add-to-cart-form js-form-disable-button "
+																			action="#/add_to_cart"
+																			accept-charset="UTF-8" method="post"><input
+																				type="hidden" name="authenticity_token"
+																				value="BUvUNdoHDKYLeckxe38OZvztD51cL1zAJ9EXY64f97OkVBqVpA6RyNguXJRig1jT9UV5+bsDV3HJT/GJvWyD3g==">
+																			<button name="button" type="submit"
+																				id="t-add-to-cart-387"
+																				class="btn btn-quaternary btn-sm btn-sm--bigger-font"
+																				data-track-action="purchase"
+																				data-track-label="Diseño, Fotografía y Vídeo"
+																				data-track-href="#"
+																				data-disable="true"><i
+																					class="fa fa-shopping-cart"></i>
+																				<span class="price to-right"><span
+																						class="m-price">S/
+																						29.90</span></span>
+
+																			</button>
+																		</form>
+
+
+																		<span
+																			class="price-badges js-price-badges t-price-badges">
+																			<span
+																				class="price-badges--badges t-price-badges--badges">
+																				<a
+																					href="#"><span
+																						class="badge badge--promo-tag-59 ">REBAJAS</span></a>
+																			</span>
+																			<span class="price-badges--prices">
+																				<span
+																					class="price-discount t-price-discount">80%
+																					Dto.</span>
+																				<b class="price-before t-price-before"><span
+																						class="m-price">S/
+																						149</span></b>
+																			</span>
+																		</span>
+
+
+																	</div>
+																</footer>
 															</div>
 														</div>
-													</div>
-													<div class="col-lg-4 col-md-6">
-														<div class="l_news_item">
-															<div class="l_news_img"><a href="#"><img class="img-fluid" src="img/t6.jpg" alt=""></a></div>
-															<div class="l_news_content">
-																<a href="#"><h4>CCTV y Seguridad electronica</h4></a>
-																<p>Implementacion de sistema de CCTV, DVRs, inalambricas y alambricas, Ips y analogicas para empresas y municipios. Asi como de sistemas de seguridad electronica con sensores magneticos y de movimiento.</p>
-																<a class="more_btn" href="#">Learn More</a>
+														<div class="col-lg-4 col-md-6">
+															<div class="course-item__box">
+																<a class="course-item__cover video-player" style="font-weight: 500;position: relative;display: block;"
+																	title="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																	data-track-label="Diseño, Fotografía y Vídeo"
+																	data-track-href="#"
+																	data-track-gtm="false" data-track-gtm-id="387"
+																	data-track-gtm-title="Introducción a Adobe Photoshop"
+																	data-track-gtm-brand="carlesmarsal"
+																	data-track-gtm-price="11.9"
+																	data-track-gtm-category="Fotografía y Vídeo"
+																	data-track-gtm-section="Listing Popular"
+																	data-track-action="play" data-toggle="modal"
+																	data-target="#course-modal" data-dismiss="modal"
+																	href="https://www.domestika.org/es/xhr/courses/modals/387-introduccion-a-adobe-photoshop">
+																	<picture>
+																		<source
+																			media="only screen and (max-width: 479px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<source
+																			media="only screen and (min-width: 992px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<source
+																			media="only screen and (min-width: 480px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<img data-src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713"
+																			alt="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																			class=" lazyloaded"
+																			src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713">
+																	</picture>
+																	<span class="player-icon"
+																		style="top:50%; left: 50%; position:relat; font-size: 1.125rem; line-height: 40px; text-align: center;color: #fff;transform: translate(-50%,-50%);background-color: rgba(22,22,22,.6);"><i
+																			class="fa fa-play"></i></span>
+																	<span class="course-metadata clearfix">
+																		<span
+																			class="course-metadata__category">Fotografía
+																			y Vídeo</span>
+																	</span>
+																	<div class="course-badges">
+																		<span class="badge badge--basic ">Zenith
+																			Basics</span>
+																		<span
+																			class="badge badge--basic_courses badge--course">5
+																			cursos</span>
+
+																	</div>
+
+																</a>
+																<div class="course-item__details">
+																	<h3 class="course-item__title">
+																		<span class="badge badge--top_sales ">Top
+																			ventas</span>
+																		<a data-track-label="Diseño, Fotografía y Vídeo"
+																			data-track-href="#"
+																			data-track-gtm="false"
+																			data-track-gtm-id="387"
+																			data-track-gtm-title="Introducción a Adobe Photoshop"
+																			data-track-gtm-brand="carlesmarsal"
+																			data-track-gtm-price="11.9"
+																			data-track-gtm-category="Fotografía y Vídeo"
+																			data-track-gtm-section="Listing Popular"
+																			data-track-action="course-title"
+																			href="#">Introducción
+																			a Adobe Photoshop</a>
+																	</h3>
+																	<p class="course-item__teacher">
+																		Por Carles Marsal
+																	</p>
+																	<h4 class="course-item__subtitle">
+																		Aprende Adobe Photoshop desde cero y domina el
+																		mejor software de tratamiento, retoque y
+																		creación de imágenes digitales del mercado
+																	</h4>
+																	<div class="course-item__stats">
+																		<ul class="m-course-stats">
+																			<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																				data-placement="top"
+																				data-toggle="tooltip" title="Alumnos">
+																				<i class="a-icon-user"></i>
+																				229335
+																			</li>
+																			<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																				data-placement="top"
+																				data-toggle="tooltip"
+																				title="El 100% de las 6070 valoraciones de los alumnos son positivas">
+																				<i class="a-icon-thumbs-up"></i>
+																				100%
+																				(<span
+																					data-href="#/reviews">6.1K</span>)
+																			</li>
+																		</ul>
+
+																	</div>
+																</div>
+
+																<footer class="course-item__footer">
+																	<div class="btn-toolbar flex-column flex-md-row">
+																		<form
+																			class="as-btn js-add-to-cart-form js-form-disable-button "
+																			action="#/add_to_cart"
+																			accept-charset="UTF-8" method="post"><input
+																				type="hidden" name="authenticity_token"
+																				value="BUvUNdoHDKYLeckxe38OZvztD51cL1zAJ9EXY64f97OkVBqVpA6RyNguXJRig1jT9UV5+bsDV3HJT/GJvWyD3g==">
+																			<button name="button" type="submit"
+																				id="t-add-to-cart-387"
+																				class="btn btn-quaternary btn-sm btn-sm--bigger-font"
+																				data-track-action="purchase"
+																				data-track-label="Diseño, Fotografía y Vídeo"
+																				data-track-href="#"
+																				data-disable="true"><i
+																					class="fa fa-shopping-cart"></i>
+																				<span class="price to-right"><span
+																						class="m-price">S/
+																						29.90</span></span>
+
+																			</button>
+																		</form>
+
+
+																		<span
+																			class="price-badges js-price-badges t-price-badges">
+																			<span
+																				class="price-badges--badges t-price-badges--badges">
+																				<a
+																					href="#"><span
+																						class="badge badge--promo-tag-59 ">REBAJAS</span></a>
+																			</span>
+																			<span class="price-badges--prices">
+																				<span
+																					class="price-discount t-price-discount">80%
+																					Dto.</span>
+																				<b class="price-before t-price-before"><span
+																						class="m-price">S/
+																						149</span></b>
+																			</span>
+																		</span>
+
+
+																	</div>
+																</footer>
+															</div>
+														</div>
+														<div class="col-lg-4 col-md-6">
+															<div class="course-item__box">
+																<a class="course-item__cover video-player" style="font-weight: 500;position: relative;display: block;"
+																	title="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																	data-track-label="Diseño, Fotografía y Vídeo"
+																	data-track-href="#"
+																	data-track-gtm="false" data-track-gtm-id="387"
+																	data-track-gtm-title="Introducción a Adobe Photoshop"
+																	data-track-gtm-brand="carlesmarsal"
+																	data-track-gtm-price="11.9"
+																	data-track-gtm-category="Fotografía y Vídeo"
+																	data-track-gtm-section="Listing Popular"
+																	data-track-action="play" data-toggle="modal"
+																	data-target="#course-modal" data-dismiss="modal"
+																	href="https://www.domestika.org/es/xhr/courses/modals/387-introduccion-a-adobe-photoshop">
+																	<picture>
+																		<source
+																			media="only screen and (max-width: 479px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_258,t_base_params.format_jpg,w_459/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<source
+																			media="only screen and (min-width: 992px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<source
+																			media="only screen and (min-width: 480px)"
+																			data-srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x"
+																			srcset="https://cdn.domestika.org/c_fill,dpr_1.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713, https://cdn.domestika.org/c_fill,dpr_2.0,h_205,t_base_params.format_jpg,w_364/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713 2x">
+																		<img data-src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713"
+																			alt="Introducción a Adobe Photoshop. Un curso de Diseño, Fotografía y Vídeo de Carles Marsal"
+																			class=" lazyloaded"
+																			src="https://cdn.domestika.org/c_fill,dpr_auto,h_157,t_base_params.format_jpg,w_280/v1563794713/course-covers/000/000/387/387-original.jpg?1563794713">
+																	</picture>
+																	<span class="player-icon"
+																		style="top:50%; left: 50%; position:relat; font-size: 1.125rem; line-height: 40px; text-align: center;color: #fff;transform: translate(-50%,-50%);background-color: rgba(22,22,22,.6);"><i
+																			class="fa fa-play"></i></span>
+																	<span class="course-metadata clearfix">
+																		<span
+																			class="course-metadata__category">Fotografía
+																			y Vídeo</span>
+																	</span>
+																	<div class="course-badges">
+																		<span class="badge badge--basic ">Zenith
+																			Basics</span>
+																		<span
+																			class="badge badge--basic_courses badge--course">5
+																			cursos</span>
+
+																	</div>
+
+																</a>
+																<div class="course-item__details">
+																	<h3 class="course-item__title">
+																		<span class="badge badge--top_sales ">Top
+																			ventas</span>
+																		<a data-track-label="Diseño, Fotografía y Vídeo"
+																			data-track-href="#"
+																			data-track-gtm="false"
+																			data-track-gtm-id="387"
+																			data-track-gtm-title="Introducción a Adobe Photoshop"
+																			data-track-gtm-brand="carlesmarsal"
+																			data-track-gtm-price="11.9"
+																			data-track-gtm-category="Fotografía y Vídeo"
+																			data-track-gtm-section="Listing Popular"
+																			data-track-action="course-title"
+																			href="#">Introducción
+																			a Adobe Photoshop</a>
+																	</h3>
+																	<p class="course-item__teacher">
+																		Por Carles Marsal
+																	</p>
+																	<h4 class="course-item__subtitle">
+																		Aprende Adobe Photoshop desde cero y domina el
+																		mejor software de tratamiento, retoque y
+																		creación de imágenes digitales del mercado
+																	</h4>
+																	<div class="course-item__stats">
+																		<ul class="m-course-stats">
+																			<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																				data-placement="top"
+																				data-toggle="tooltip" title="Alumnos">
+																				<i class="a-icon-user"></i>
+																				229335
+																			</li>
+																			<li class="m-course-stats__stat m-course-stats__stat--inline has-tooltip"
+																				data-placement="top"
+																				data-toggle="tooltip"
+																				title="El 100% de las 6070 valoraciones de los alumnos son positivas">
+																				<i class="a-icon-thumbs-up"></i>
+																				100%
+																				(<span
+																					data-href="#/reviews">6.1K</span>)
+																			</li>
+																		</ul>
+
+																	</div>
+																</div>
+
+																<footer class="course-item__footer">
+																	<div class="btn-toolbar flex-column flex-md-row">
+																		<form
+																			class="as-btn js-add-to-cart-form js-form-disable-button "
+																			action="#/add_to_cart"
+																			accept-charset="UTF-8" method="post"><input
+																				type="hidden" name="authenticity_token"
+																				value="BUvUNdoHDKYLeckxe38OZvztD51cL1zAJ9EXY64f97OkVBqVpA6RyNguXJRig1jT9UV5+bsDV3HJT/GJvWyD3g==">
+																			<button name="button" type="submit"
+																				id="t-add-to-cart-387"
+																				class="btn btn-quaternary btn-sm btn-sm--bigger-font"
+																				data-track-action="purchase"
+																				data-track-label="Diseño, Fotografía y Vídeo"
+																				data-track-href="#"
+																				data-disable="true"><i
+																					class="fa fa-shopping-cart"></i>
+																				<span class="price to-right"><span
+																						class="m-price">S/
+																						29.90</span></span>
+
+																			</button>
+																		</form>
+
+
+																		<span
+																			class="price-badges js-price-badges t-price-badges">
+																			<span
+																				class="price-badges--badges t-price-badges--badges">
+																				<a
+																					href="#"><span
+																						class="badge badge--promo-tag-59 ">REBAJAS</span></a>
+																			</span>
+																			<span class="price-badges--prices">
+																				<span
+																					class="price-discount t-price-discount">80%
+																					Dto.</span>
+																				<b class="price-before t-price-before"><span
+																						class="m-price">S/
+																						149</span></b>
+																			</span>
+																		</span>
+
+
+																	</div>
+																</footer>
 															</div>
 														</div>
 													</div>
@@ -1331,16 +2087,22 @@ En el tercer capitulo aprenderás a generar planos y a extraer mediciones del pr
 									<div class="vc_row-full-width vc_clearfix"></div>
 
 									<div class="vc_row-full-width vc_clearfix"></div>
+
+									<div class="vc_row-full-width vc_clearfix"></div>
+
+									<div class="vc_row-full-width vc_clearfix"></div>
+
+									<div class="vc_row-full-width vc_clearfix"></div>
 									<div id="clientes" data-vc-full-width="true" data-vc-full-width-init="false"
 										class="vc_row wpb_row vc_row-fluid vc_custom_1544114198567 vc_row-has-fill">
 										<div class="wpb_column vc_column_container vc_col-sm-12">
 											<div class="vc_column-inner">
-												
+
 											</div>
 										</div>
 									</div>
-									
-									
+
+
 
 									<div class="vc_row-full-width vc_clearfix"></div>
 									<div id="contacto" data-vc-full-width="true" data-vc-full-width-init="false"
@@ -1480,10 +2242,10 @@ En el tercer capitulo aprenderás a generar planos y a extraer mediciones del pr
 										</div>
 									</div>
 
-									
+
 
 									<div class="vc_row-full-width vc_clearfix"></div>
-									
+
 									<div class="vc_row-full-width vc_clearfix"></div>
 								</div><!-- .entry-content -->
 							</div>
@@ -1492,89 +2254,101 @@ En el tercer capitulo aprenderás a generar planos y a extraer mediciones del pr
 				</div><!-- .content-area -->
 			</div><!-- Conteiner End -->
 
-			
+
 			<!--footer-->
 			<footer class="colorfooter">
 				<div class="container">
 					<div class="row">
 
-						
 
-						
-							
-								<div class="container" style="padding-top: 50px;">
-									<div class="row">
-										<div class="col-lg-3 col-md-6">
-											<aside class="content-bottom-widgets  col-sm-9 footer_column">
-												<div class="widget-area">
-													<div class="widget_text  footer_column">
-														<section id="custom_html-3" class="widget_text widget widget_custom_html">
-															<div class=" custom-html-widget"><img class="alignnone size-full wp-image-2744"
-																	src="wp-content/uploads/2018/11/zenith-logo.png" alt="" width="250"
-																	height="200" style="margin-top: 15px;" /></div>
-					
-					
-														</section>
-													</div>
-												</div> <!-- .widget-area -->
-											</aside>
-											<aside class="f_widget subscribe_widget">
-												<div class="f_w_title">
-													<h3>Suscribete para novedades:</h3>
-												</div>
-												<p>Subscribete y te enviaremos por correo informacion sobre nosotros.</p>
-												
-												<ul>
-													<li><a href="https://fb.me/AllinSolutionsSAC"><i class="fa fa-facebook"></i></a></li>
-													<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-													<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-													<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-													<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-												</ul>
-											</aside>
+
+
+
+						<div class="container" style="padding-top: 50px;">
+							<div class="row">
+								<div class="col-lg-3 col-md-6">
+									<aside class="content-bottom-widgets  col-sm-9 footer_column">
+										<div class="widget-area">
+											<div class="widget_text  footer_column">
+												<section id="custom_html-3"
+													class="widget_text widget widget_custom_html">
+													<div class=" custom-html-widget"><img
+															class="alignnone size-full wp-image-2744"
+															src="wp-content/uploads/2018/11/zenith-logo.png" alt=""
+															width="250" height="200" style="margin-top: 15px;" /></div>
+
+
+												</section>
+											</div>
+										</div> <!-- .widget-area -->
+									</aside>
+									<aside class="f_widget subscribe_widget">
+										<div class="f_w_title">
+											<h3>Suscribete para novedades:</h3>
 										</div>
-										<div class="col-lg-3 col-md-6">
-											<aside class="f_widget subscribe_widget">
-												<div class="f_w_title">
-													<h3>Sobre nosotros:</h3>
-												</div>
-												<div>
-													<p>Tenemos 3 años de experiencia realizando proyectos de Telecomunicaciones y proyectos aplicados en internet de las cosas.</p>
-												</div>
-											</aside>
-										</div>
-										<div class="col-lg-3 col-md-6">
-											<aside class="f_widget contact_widget">
-												<div class="f_w_title">
-													<h3>Contactenos</h3>
-												</div>
-												<p><i class="fa fa-phone" aria-hidden="true"></i> Telefono: <br> (01) 636 2302  </p>
-												<p><i class="fa fa-envelope-o" aria-hidden="true"></i> Correo: <br> jfuertes@allinconnections.com</p>
-												<p><i class="fa fa-map-marker" aria-hidden="true"></i> Direccion: <br>Av. Oscar R. Benavides 679 <br>Lima, Perú</p>
-												<h6></h6>
-											</aside>
-										</div>
-										<div class="col-lg-3 col-md-6">
-											<aside class="f_widget categories_widget">
-												<div class="f_w_title">
-													<h3>Categorias</h3>
-												</div>
-												
-												<ul>
-													<li><a href="index.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Inicio</a></li>
-													<li><a href="nosotros.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Nosotros</a></li>
-													<li><a href="cursos.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Cursos</a></li>
-													<li><a href="recursos.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Recursos</a></li>
-													<li><a href="#contacto"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Contacto</a></li>
-												</ul>
-											</aside>
-										</div>
-										
-									</div>
+										<p>Subscribete y te enviaremos por correo informacion sobre nosotros.</p>
+
+										<ul>
+											<li><a href="https://fb.me/AllinSolutionsSAC"><i
+														class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+											<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+											<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+										</ul>
+									</aside>
 								</div>
-							
-							
-						
+								<div class="col-lg-3 col-md-6">
+									<aside class="f_widget subscribe_widget">
+										<div class="f_w_title">
+											<h3>Sobre nosotros:</h3>
+										</div>
+										<div>
+											<p>Tenemos 3 años de experiencia realizando proyectos de Telecomunicaciones
+												y proyectos aplicados en internet de las cosas.</p>
+										</div>
+									</aside>
+								</div>
+								<div class="col-lg-3 col-md-6">
+									<aside class="f_widget contact_widget">
+										<div class="f_w_title">
+											<h3>Contactenos</h3>
+										</div>
+										<p><i class="fa fa-phone" aria-hidden="true"></i> Telefono: <br> (01) 636 2302
+										</p>
+										<p><i class="fa fa-envelope-o" aria-hidden="true"></i> Correo: <br>
+											jfuertes@allinconnections.com</p>
+										<p><i class="fa fa-map-marker" aria-hidden="true"></i> Direccion: <br>Av. Oscar
+											R. Benavides 679 <br>Lima, Perú</p>
+										<h6></h6>
+									</aside>
+								</div>
+								<div class="col-lg-3 col-md-6">
+									<aside class="f_widget categories_widget">
+										<div class="f_w_title">
+											<h3>Categorias</h3>
+										</div>
+
+										<ul>
+											<li><a href="index.html"><i class="fa fa-angle-double-right"
+														aria-hidden="true"></i>Inicio</a></li>
+											<li><a href="nosotros.html"><i class="fa fa-angle-double-right"
+														aria-hidden="true"></i>Nosotros</a></li>
+											<li><a href="cursos.html"><i class="fa fa-angle-double-right"
+														aria-hidden="true"></i>Cursos</a></li>
+											<li><a href="recursos.html"><i class="fa fa-angle-double-right"
+														aria-hidden="true"></i>Recursos</a></li>
+											<li><a href="#contacto"><i class="fa fa-angle-double-right"
+														aria-hidden="true"></i>Contacto</a></li>
+										</ul>
+									</aside>
+								</div>
+
+							</div>
+						</div>
+
+
+
 
 					</div>
 					<div class="row">

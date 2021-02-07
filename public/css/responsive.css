@@ -196,6 +196,8 @@
     }
 }
 @media(max-width: 767px){
+
+    
     .testimonials_slider .item .media {
         display: block;
     }
@@ -239,6 +241,7 @@
     }
 }
 @media(max-width: 575px){
+    
     .c_feature_box {
         margin-top: 0px;
     }
@@ -292,6 +295,7 @@
     }
 }
 @media(max-width: 480px){
+    
     .static_main_content .media{
         display: block;
     }

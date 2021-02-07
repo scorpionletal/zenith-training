@@ -336,6 +336,10 @@
 
 		@media (min-width: 320px) and (max-width: 480px) {
 
+			#visualizar{
+        display: none !important;
+    }
+
 			.wpb_content_element .wpb_tabs_nav li.ui-tabs-active a,
 			.wpb_gallery .wpb_flexslider .flex-caption {
 				height: 380px;
@@ -348,6 +352,16 @@
 		}
 
 		@media (min-width: 320px) and (max-width: 767px) {
+
+			#visualizar{
+        		display: none !important;
+			}
+			
+			#tamaño-logo {
+				height: 1rem !important;
+				width: 4rem !important;
+			}
+
 			#producto1 {
 				display: none !important;
 			}
@@ -362,6 +376,10 @@
 		}
 
 		@media (min-width: 320px) and (max-width: 576px) {
+
+			#sub-titulo {
+				font-size: 11px !important;
+			}
 
 			.vc_custom_1544823681595,
 			.vc_custom_1544823805224 {
@@ -744,7 +762,7 @@
 							<nav class="navbar navbar-default" id="primary_nav_wrap">
 								<div class="navbar-header">
 									<a class="navbar-brand logo" href="index.html">
-										<img src="wp-content/uploads/2018/11/zenith-logo.png" alt="Zenith"
+										<img id="tamaño-logo" src="wp-content/uploads/2018/11/zenith-logo.png" alt="Zenith"
 											class="img-responsive main_logo align-items-stretch"
 											style=" margin-top: 0.5px; margin-left: 5px; height: 4rem !important;width: 18rem !important;">
 									</a>
@@ -868,7 +886,7 @@
 								data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 6; white-space: nowrap; font-size: 60px ;  color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">
-								<span style="font-family:'Montserrat';font-size : 58% !important;">EXPERTOS IMPULSANDO
+								<span id="sub-titulo" style="font-family:'Montserrat';font-size : 58% !important;">EXPERTOS IMPULSANDO
 									AL PROFESIONAL DEL FUTURO</span>
 							</div><!-- LAYER NR. 3 -->
 							<div class="tp-caption   tp-resizeme" id="slide-1-layer-12"
@@ -942,7 +960,7 @@
 								data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 6; white-space: nowrap; font-size: 60px ;  color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">
-								<span style="font-family:'Montserrat';font-size : 58% !important;">EXPERTOS IMPULSANDO
+								<span id="sub-titulo" style="font-family:'Montserrat';font-size : 58% !important;">EXPERTOS IMPULSANDO
 									AL PROFESIONAL DEL FUTURO</span>
 							</div>
 							<!-- LAYER NR. 8 -->
@@ -1028,7 +1046,7 @@
 								data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 6; white-space: nowrap; font-size: 60px ;  color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">
-								<span style="font-family:'Montserrat';font-size : 58% !important;">EXPERTOS IMPULSANDO
+								<span id="sub-titulo" style="font-family:'Montserrat';font-size : 58% !important;">EXPERTOS IMPULSANDO
 									AL PROFESIONAL DEL FUTURO</span>
 							</div>
 							<!-- LAYER NR. 8 -->
@@ -1178,8 +1196,9 @@
 						}</script>
 				</div><!-- END REVOLUTION SLIDER -->
 			</div>
-			<div class="">
+			
 				<section class="creative_feature_area">
+					<div id="visualizar">
 					<div class="container">
 						<div class="c_feature_box">
 							<div class="row">
@@ -1240,10 +1259,11 @@
 							</div>
 						</div>
 					</div>
+				</div>
 				</section>
 
 
-			</div>
+			
 
 			<div class="container">
 
