@@ -626,7 +626,7 @@ i:before {
 .c_box_item h4 {
   font-size: 20px;
   color: #232d37;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat";
   font-weight: 500;
   line-height: 15px;
   padding-bottom: 10px;
@@ -638,28 +638,29 @@ i:before {
 
 .c_box_item h4 i {
   padding-right: 10px;
-  color: #2bc0a4;
+  color: #5056d3;
 }
 
 .c_box_item h4:hover {
-  color: #2bc0a4;
+  color: #5056d3;
 }
 
 .c_box_item p {
   font-size: 14px;
   line-height: 26px;
   color: #51545f;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat";
 }
 
 .d_feature_text .main_title {
+  font-family: "Montserrat";
   padding-bottom: 20px;
 }
 
 .d_feature_text p {
-  font-size: 14px;
+  font-size: 15px;
   color: #51545f;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 26px;
   padding-bottom: 12px;
 }
@@ -1065,7 +1066,7 @@ i:before {
 /* Our Service Area css
 ============================================================================================ */
 .service_area {
-  background: url(../wp-content/uploads/2018/11/constructii1.png) no-repeat fixed center center;
+  background: url(https://s1.1zoom.me/b5050/8/339356-svetik_3840x2160.jpg) no-repeat fixed center center;
   background-size: cover;
   position: relative;
   z-index: 2;
@@ -1074,7 +1075,7 @@ i:before {
 
 .service_area:before {
   content: "";
-  background: rgba(4, 8, 29, 0.7);
+  background: rgba(5, 12, 14, 0.666);
   position: absolute;
   left: 0px;
   top: 0px;
