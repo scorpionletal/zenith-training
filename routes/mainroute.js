@@ -10,7 +10,7 @@ router.use('/',routeprincipal);
 
 router.use('/',routermesagetocontact);
 
-router.use('/preinscritos',routerpreinscritos);
+router.use('/cursos',routerpreinscritos);
 
 
 module.exports = router;
