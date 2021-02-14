@@ -4,6 +4,8 @@ var server = require('./controllers/app').server;
 
 var flash = require('connect-flash');
 
+require('dotenv').config();
+
 
 var path = require('path');
 
