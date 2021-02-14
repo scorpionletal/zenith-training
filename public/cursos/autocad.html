@@ -1184,65 +1184,39 @@
 					</button>
 				</div>
 				<div class="modal-body">
+						<form action="preinscritos" method="post">
 						
-
-					<form action="preinscritos"
-														method="post" class="wpcf7-form" novalidate="novalidate">
-														
-														<div class="row">
-															<div class="col-md-12"> <span
-																	class="wpcf7-form-control-wrap full-name"><input
-																		type="text" name="nombre" value="" size="40"
-																		class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-																		aria-required="true" aria-invalid="false"
-																		placeholder="Nombre" /></span></div>
-														</div>
-														<div class="row">
-															<div class="col-md-6"> <span
-																	class="wpcf7-form-control-wrap full-name"><input
-																		type="text" name="apellido" value="" size="40"
-																		class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-																		aria-required="true" aria-invalid="false"
-																		placeholder="Apellido" /></span></div>
-															<div class="col-md-6"> <span
-																	class="wpcf7-form-control-wrap full-phone"><input
-																		type="text" name="telefono" value="" size="40"
-																		class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-																		aria-required="true" aria-invalid="false"
-																		placeholder="Telefono" /></span></div>
-														</div>
-														<div class="row">
-															<div class="col-md-12"> <span
-																	class="wpcf7-form-control-wrap email"><input
-																		type="text" name="correo" value="" size="40"
-																		class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-																		aria-required="true" aria-invalid="false"
-																		placeholder="Correo" /></span></div>
-														</div>
-														<div class="row">
-															<div class="col-md-12"> <span
-																	class="wpcf7-form-control-wrap curso"><select
-																		name="curso"
-																		class="wpcf7-form-control wpcf7-select"
-																		aria-invalid="false">
-																		<option value="">---Elegir Curso--</option>
-																		<option value="autocad">Autocad</option>
-																		<option value="revit">Revit</option>
-																		<option value="civil3d">Civil 3D</option>
-																		<option value="autodesk">Autodesk</option>
-																		
-																		
-																	</select></span></div>
-														</div>
-														
-														<div class="row">
-															<div class="col-md-12"> <input type="submit" value="Enviar"
-																	class="wpcf7-form-control wpcf7-submit btn button" />
-															</div>
-														</div>
-													</form>
-
-
+							<div class="form-group">
+								<input type="text" name="nombre" placeholder="Nombre" class="form-control" required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="apellido" placeholder="Apellido" class="form-control" required>
+								
+							</div>
+							<div class="form-group">
+								<input type="text" name="correo" placeholder="Correo" class="form-control" required>
+							</div>
+							<div class="form-group">
+									<input type="text" name="telefono" placeholder="Telefono" class="form-control" required>
+							</div>
+					
+							
+							<div class="form-group">
+									<select  name="curso" required>
+										<option value= '' selected >---Seleccione el CURSO---</option>
+										<option value='autocad' >Autocad</option>
+										<option value='revit' >Revit</option>
+										<option value="civil3D">Civil 3D</option>
+										<option value="autodesk">Autodesk</option>
+									</select>
+								</div>
+							<div class="card-body float-right justify-content-between align-items-center">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn btn-primary">
+									Enviar
+								</button>
+							</div>
+						</form>
 				</div>
 				
 				</div>

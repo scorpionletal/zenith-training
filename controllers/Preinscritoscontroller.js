@@ -20,7 +20,7 @@ preinscritoscontroller.preinscritos_controller = (req, res) => {
         console.log(data);
         console.log('********************');
 
-        res.redirect('/graciaspreinscrito.html');
+        res.render('/graciaspreinscrito.html');
     });
    
 }
