@@ -22,15 +22,14 @@ principalcontroller.mesagetocontact_controller = (req, res)=> {
                 
                 // configura los datos del correo
                 var mailOptions = {
-                from: "MaestroPeru <leone.vitrub.uni@gmail.com>",
-                to: 'casas_maestro@hotmail.com',
+                from: "Zenith <leone.vitrub.uni@gmail.com>",
+                to: 'uni.ramos.telecomun@hotmail.com',
                 subject: 'Urgente!!! Cliente',
-                html: `nombre: ${req.body.name}`+'<br>'+
-                      `celular: ${req.body.phone}`+'<br>'+
-                      `correo: ${req.body.email}`+'<br>'+
-                      `asunto: ${req.body.subject}`+ '<br>'+
-                      `producto: ${req.body.producto}`+'<br>'+
-                      `mensaje: ${req.body.message}`  
+                html: `nombre: ${req.body.nombre}`+'<br>'+
+                      `apellido: ${req.body.apellido}`+'<br>'+
+                      `telefono: ${req.body.telefono}`+'<br>'+
+                      `correo: ${req.body.correo}`+ '<br>'+
+                      `curso: ${req.body.curso}` 
                
                 };
                 
